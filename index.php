@@ -26,7 +26,7 @@ function sight(int $x, int $y, int $dir): string
 {
   $str = '';
   $i = $dir & 1 ? $x : $y;
-  $max = $dir & 2 ? SIZE - 1 : -1;
+  $max = $dir & 2 ? SIZE : -1;
   $inc = $dir & 2 ? 1 : -1;
   while ($i != $max) {
     $str .= MAZE[$dir & 1 ? $y : $i][$dir & 1 ? $i : $x];
